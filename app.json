@@ -1,0 +1,45 @@
+{
+  "name": "DarkAuraX-Bot",
+  "description": "DarkAuraX Bot - Powerful Multi-Device WhatsApp Bot",
+  "repository": "https://github.com/yourusername/DarkAuraX-Bot",
+  "logo": "https://i.imgur.com/placeholder.png",
+  "keywords": ["whatsapp", "bot", "baileys", "multi-device"],
+  "env": {
+    "OWNER_NUMBER": {
+      "description": "Your WhatsApp number without + (e.g. 234xxxxxxxxxx)",
+      "required": true
+    },
+    "SESSION": {
+      "description": "Session string (leave empty for pairing code)",
+      "required": false
+    },
+    "BOT_NAME": {
+      "description": "Bot display name",
+      "value": "DarkAuraX Bot"
+    },
+    "PREFIX": {
+      "description": "Command prefix",
+      "value": "."
+    },
+    "AUTO_STATUS_VIEW": {
+      "description": "Auto view statuses (true/false)",
+      "value": "true"
+    },
+    "ANTI_CALL": {
+      "description": "Reject incoming calls (true/false)",
+      "value": "true"
+    },
+    "ANTI_LINK": {
+      "description": "Anti-link action: off | warn | delete | remove",
+      "value": "delete"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
